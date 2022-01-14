@@ -7,11 +7,25 @@
   pointer-events: none;
 }
 
+a {
+  text-decoration: none;
+}
+
+h3 {
+  color: #61dafb;
+  text-decoration: underline;
+}
+h6 {
+  
+  padding: 55px;
+  
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+    animation: App-logo-spin infinite 1.5s linear;
   }
 }
+
 
 .App-header {
   background-color: #282c34;
