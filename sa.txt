@@ -1,0 +1,16 @@
+import app 
+web pack
+npm eject= accion permanente NO usarlo a noser que seas experimentado
+
+camelcase
+
+webpack
+create-react-app
+
+npm install react bostrap
+
+npm install --save core-js@3.6.5 polyfill
+
+sugar-syntaxis
+
+ctrl+espacio: sugerencias
