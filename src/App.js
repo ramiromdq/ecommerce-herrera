@@ -1,21 +1,19 @@
-import './App.css';
-import foto from './fotoperfil2.png';
-import NavBar from './components/navbar/NavBar';
-import "bootstrap/dist/css/bootstrap.css"
-
-
+import "./App.css";
+import NavBar from "./components/navbar/NavBar";
+import "bootstrap/dist/css/bootstrap.css";
+import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
+import CartIcon from "./icon/CartIcon";
+import Item from "./components/Item/Item";
 
 function App() {
   return (
     <div className="App">
- 
-      <NavBar/>
-     
+      <NavBar />
+      <CartIcon />
+      
       <header className="App-header">
-      <h3> Mi primera app en React </h3>
-        <img src={foto} className='App-logo' alt="foto" />   
-    
-        
+        <h3> Mi primera app en React </h3>
+       
         <a
           className="App-link"
           href="https://reactjs.org"
@@ -23,16 +21,12 @@ function App() {
           rel="noopener noreferrer"
         >
           <h6>ECOMMERCE-HERRERA </h6>
-        
-        </a>
-
-      </header>
-
-      
-
-    </div>
-
     
+        </a>
+         <ItemListContainer/>
+      </header>
+ 
+    </div>
   );
 }
 
