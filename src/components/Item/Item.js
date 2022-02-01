@@ -1,3 +1,5 @@
+import ItemCounter from "../ItemCounts/ItemCounts";
+
 const Item = ({ name, price, id, setSelectedItem }) => {
   const selectItem = () => setSelectedItem(id);
 
