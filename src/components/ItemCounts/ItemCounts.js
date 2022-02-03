@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 const ItemCounter = ({ stock }) => {
   const [counter, setCounter] = useState(0);
-  const [currentTimes, setCurrentTimes] = useState(0);
   const [getStock, setStock] = useState(stock);
 
   const minusCounter = () => {
@@ -24,6 +23,7 @@ const ItemCounter = ({ stock }) => {
         <button onClick={minusCounter}>-</button>
         <span>{counter}</span>
         <button onClick={plusCounter}>+</button>
+      
       </div>
     </div>
   );

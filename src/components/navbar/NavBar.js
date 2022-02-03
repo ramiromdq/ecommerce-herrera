@@ -1,3 +1,5 @@
+import CartIcon from "../../icon/CartIcon";
+
 function NavBar() {
   return (
     <div>
@@ -56,7 +58,10 @@ function NavBar() {
               </a>
             </li>
           </ul>
+
+          
         </div>
+        <div><CartIcon /></div>
       </nav>
     </div>
   );

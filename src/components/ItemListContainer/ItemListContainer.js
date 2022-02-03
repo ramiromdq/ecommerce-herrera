@@ -1,37 +1,33 @@
+import { promisesItems } from "../../helpers/promises";
 import Item from "../Item/Item";
 import ItemCounter from "../ItemCounts/ItemCounts";
 import { useState } from "react";
-
-const items = [
-  { id: "1", name: "iphone 5", price: "20" },
-  { id: "2", name: "iphone 6", price: "200" },
-  { id: "3", name: "iphone 6 PLUS", price: "2000" },
-  { id: "4", name: "iphone 7", price: "20000" },
-  { id: "5", name: "iphone X", price: "200000" },
-];
+import ItemList from "../Itemlist/ItemList";
+import { useEffect } from "react";
 
 const ItemListContainer = () => {
-  const [selectedItem, setSelectedItem] = useState(null);
-
+  const [products, setProducts] = useState([]);
+  const [loading,setLoading] = useState (true);
+  useEffect(() => {
+    getItemPromises();
+  }, []);
+  const getItemPromises = async () => {
+    try {
+      const result = await promisesItems;
+      setProducts(result);
+      console.log ({result});
+    } catch (error) {
+      console.log({ error });
+    } finally {
+      setLoading (false);
+    }
+  };
+  if (loading) {
+    return (<h2> Cargando </h2>)
+  }
   return (
     <div>
-      <ItemCounter stock={10} />
-      <h3> Producto seleccionado: </h3>
-
-      <p> {selectedItem ? selectedItem : "Ninguno"}</p>
-      <h1>Lista de Productos:</h1>
-
-      <hr />
-
-      {items.map(({ id, name, price }) => (
-        <Item
-          key={id}
-          id={id}
-          name={name}
-          price={price}
-          setSelectedItem={setSelectedItem}
-        />
-      ))}
+      <ItemList items={products} />
     </div>
   );
 };
