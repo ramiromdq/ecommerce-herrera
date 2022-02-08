@@ -6,8 +6,7 @@ import CartIcon from "./icon/CartIcon";
 import { task } from "./helpers/promises";
 import Item from "./components/Item/Item";
 import ItemCounts from "./components/ItemCounts/ItemCounts";
-
-
+import ItemDetailContainer from "./components/ItemDetail/ItemDetail";
 
 function App() {
   return (
@@ -25,14 +24,11 @@ function App() {
         >
           <h6>ECOMMERCE-HERRERA </h6>
         </a>
-        
       </header>
 
       <body className="App-body">
-      <ItemListContainer />
+        <ItemDetailContainer />
       </body>
-     
-    
     </div>
   );
 }

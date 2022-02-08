@@ -18,12 +18,11 @@ const ItemCounter = ({ stock }) => {
   return (
     <div>
       <div>
-        <h4> Stock Disponible: {getStock} </h4>
-        <h3>cantidad de items</h3>
+     
+        <h3>Añadir al carro</h3>
         <button onClick={minusCounter}>-</button>
         <span>{counter}</span>
         <button onClick={plusCounter}>+</button>
-      
       </div>
     </div>
   );

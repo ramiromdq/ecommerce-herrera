@@ -7,7 +7,7 @@ import { useEffect } from "react";
 
 const ItemListContainer = () => {
   const [products, setProducts] = useState([]);
-  const [loading,setLoading] = useState (true);
+  const [loading, setLoading] = useState(true);
   useEffect(() => {
     getItemPromises();
   }, []);
@@ -15,15 +15,15 @@ const ItemListContainer = () => {
     try {
       const result = await promisesItems;
       setProducts(result);
-      console.log ({result});
+      console.log({ result });
     } catch (error) {
       console.log({ error });
     } finally {
-      setLoading (false);
+      setLoading(false);
     }
   };
   if (loading) {
-    return (<h2> Cargando </h2>)
+    return <h2> Cargando </h2>;
   }
   return (
     <div>
